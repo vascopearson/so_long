@@ -19,7 +19,8 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 		$(MAKE) -C $(LIBFT)
-		$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -L $(LIBFT) -lft
+		$(MAKE) -C $(MLX)
+		$(CC) $(CFLAGS) $(MLXFLAGS) -o $(NAME) $(OBJS) -L $(LIBFT) -lft
 
 clean:
 		$(RM) $(OBJS) $(BONUS_OBJS) $(LIBFT)/*.o
