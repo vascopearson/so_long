@@ -1,0 +1,318 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+
+# Make data base, printed on Tue May 31 13:56:59 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+BASH_SILENCE_DEPRECATION_WARNING = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/Mar/Desktop/so_long
+# makefile
+SHELL = /bin/sh
+# makefile (from `Makefile', line 6)
+RM = rm -f
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from `Makefile', line 8)
+MLX = mlx
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 9)
+CFLAGS = -g -Wall -Wextra -Werror -I$(HEADER) -I$(LIBFT) -I$(MLX)
+# makefile (from `Makefile', line 1)
+ 
+MAKEFILE_LIST :=  Makefile
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from `Makefile', line 3)
+OBJS = $(SRCS:.c=.o)
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/by/fx2s2rm52v98q692r3d8vwp40000gn/T/vscode-ipc-057501b0-2fc3-4afe-ab9b-f6e3c98355b9.sock
+# environment
+VSCODE_CWD = /
+# environment
+PATH = /usr/local/mysql/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Users/Mar/bin:/Users/Mar/opt/anaconda3/bin:/Users/Mar/opt/anaconda3/condabin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.XMQlm0N9PN/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = /private/tmp/com.apple.launchd.tMC6uJim4j/org.xquartz:0
+# environment
+CONDA_EXE = /Users/Mar/opt/anaconda3/bin/conda
+# makefile (from `Makefile', line 10)
+MLXFLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/Mar/Desktop/so_long
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/Mar
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/Mar/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+LOGNAME = Mar
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+CONDA_DEFAULT_ENV = base
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# makefile (from `Makefile', line 1)
+SRCS = src/test.c
+# environment
+SHLVL = 2
+# makefile (from `Makefile', line 7)
+LIBFT = libft
+# makefile (from `Makefile', line 5)
+CC = gcc
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = Mar
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from `Makefile', line 16)
+NAME = so_long
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+CONDA_SHLVL = 1
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/by/fx2s2rm52v98q692r3d8vwp40000gn/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/Mar/Library/Application Support/Code/1.67.2-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+XPC_SERVICE_NAME = com.microsoft.VSCode.49424
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x2
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# environment
+CONDA_PYTHON_EXE = /Users/Mar/opt/anaconda3/bin/python
+# makefile (from `Makefile', line 11)
+HEADER = inc
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+_CE_M = 
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# environment
+CONDA_PREFIX = /Users/Mar/opt/anaconda3
+# environment
+VSCODE_PID = 69416
+# environment
+_CE_CONDA = 
+# environment
+LANG = C
+# variable set hash-table stats:
+ 
+# Load=80/1024=8%, Rehash=0, Collisions=5/112=4%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777223, inode 33807458): 10 files, no impossibilities.
+# src (device 16777223, inode 33807621): 4 files, no impossibilities so far.
+
+# 14 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+%.o: %.c
+#  commands to execute (from `Makefile', line 14):
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+all: so_long
+#  Phony target (prerequisite of .PHONY).
+#  Command-line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+.PHONY: all clean fclean re bonus
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-31 13:56:37
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+src/test.o: src/test.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `src/test'
+#  Last modified 2022-05-31 13:56:48
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 14):
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	
+
+bonus: src/test.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 29):
+	$(RM) $(NAME)
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean so_long
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 26):
+	$(RM) $(OBJS) $(BONUS_OBJS) $(LIBFT)/*.o
+	
+
+# Not a target:
+src/test.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-31 13:51:16
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+so_long: src/test.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-05-31 13:56:50
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 21):
+	$(MAKE) -C $(LIBFT)
+	$(MAKE) -C $(MLX)
+	$(CC) $(CFLAGS) $(MLXFLAGS) -o $(NAME) $(OBJS) -L $(LIBFT) -lft
+	
+
+# files hash-table stats:
+# Load=12/1024=1%, Rehash=0, Collisions=0/39=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+ 
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Tue May 31 13:56:59 2022
+
+ 

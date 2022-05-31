@@ -7,7 +7,7 @@ RM = rm -f
 LIBFT = libft
 MLX = mlx
 CFLAGS = -g -Wall -Wextra -Werror -I$(HEADER) -I$(LIBFT) -I$(MLX)
-MLXFLAGS = -lmlx -framework OpenGL -framework AppKit
+MLXFLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
 HEADER = inc
 
 %.o: %.c
