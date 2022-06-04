@@ -1,6 +1,17 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/Mar/Desktop/so_long'
-make: Nothing to be done for `all'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C libft
+ 
+make[1]: Entering directory `/Users/Mar/Desktop/so_long/libft'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/Users/Mar/Desktop/so_long/libft'
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C mlx
+ 
+make[1]: Entering directory `/Users/Mar/Desktop/so_long/mlx'
+make[1]: Nothing to be done for `all'.
+ 
+make[1]: Leaving directory `/Users/Mar/Desktop/so_long/mlx'
+gcc -g -Wall -Wextra -Werror -Iinc -Ilibft -Imlx -Lmlx -lmlx -framework OpenGL -framework AppKit -o so_long src/so_long.o src/map.o src/map_utils.o src/map_utils2.o get_next_line/get_next_line.o -L libft -lft
  
 make: Leaving directory `/Users/Mar/Desktop/so_long'
  

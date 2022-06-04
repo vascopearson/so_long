@@ -8,10 +8,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Tue May 31 13:56:59 2022
+# Make data base, printed on Sat Jun  4 13:35:41 2022
 
 # Variables
 
+ 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -41,14 +42,13 @@ _ = /usr/bin/make
 # makefile (from `Makefile', line 9)
 CFLAGS = -g -Wall -Wextra -Werror -I$(HEADER) -I$(LIBFT) -I$(MLX)
 # makefile (from `Makefile', line 1)
- 
 MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # makefile (from `Makefile', line 3)
 OBJS = $(SRCS:.c=.o)
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/by/fx2s2rm52v98q692r3d8vwp40000gn/T/vscode-ipc-057501b0-2fc3-4afe-ab9b-f6e3c98355b9.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/by/fx2s2rm52v98q692r3d8vwp40000gn/T/vscode-ipc-98e5ff81-2256-4eb7-9c3e-81e6cd9ece3f.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -102,7 +102,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # makefile (from `Makefile', line 1)
-SRCS = src/test.c
+SRCS = src/so_long.c src/map.c src/map_utils.c src/map_utils2.c get_next_line/get_next_line.c
 # environment
 SHLVL = 2
 # makefile (from `Makefile', line 7)
@@ -168,14 +168,13 @@ MAKELEVEL := 0
 # environment
 CONDA_PREFIX = /Users/Mar/opt/anaconda3
 # environment
-VSCODE_PID = 69416
+VSCODE_PID = 5131
 # environment
 _CE_CONDA = 
 # environment
 LANG = C
 # variable set hash-table stats:
- 
-# Load=80/1024=8%, Rehash=0, Collisions=5/112=4%
+# Load=80/1024=8%, Rehash=0, Collisions=5/119=4%
 
 # Pattern-specific Variable Values
 
@@ -183,10 +182,10 @@ LANG = C
 
 # Directories
 
-# . (device 16777223, inode 33807458): 10 files, no impossibilities.
-# src (device 16777223, inode 33807621): 4 files, no impossibilities so far.
+# . (device 16777223, inode 33842577): 13 files, no impossibilities.
+# src (device 16777223, inode 33842748): 9 files, no impossibilities so far.
 
-# 14 files, no impossibilities in 2 directories.
+# 22 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -199,20 +198,38 @@ LANG = C
 
 # Files
 
+# Not a target:
+src/map.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-04 12:18:06
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
 all: so_long
 #  Phony target (prerequisite of .PHONY).
 #  Command-line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
 
 .PHONY: all clean fclean re bonus
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+# Not a target:
+src/map_utils2.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-04 13:35:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 .SUFFIXES:
@@ -223,25 +240,26 @@ all: so_long
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-31 13:56:37
+#  Last modified 2022-06-04 13:35:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-src/test.o: src/test.c
+src/map_utils.o: src/map_utils.c
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: `src/test'
-#  Last modified 2022-05-31 13:56:48
+#  Implicit/static pattern stem: `src/map_utils'
+#  Last modified 2022-06-04 13:35:27
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
+ 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 14):
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 	
 
-bonus: src/test.o
+bonus: src/so_long.o src/map.o src/map_utils.o src/map_utils2.o get_next_line/get_next_line.o
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -255,6 +273,24 @@ fclean: clean
 #  commands to execute (from `Makefile', line 29):
 	$(RM) $(NAME)
 	
+
+src/so_long.o: src/so_long.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `src/so_long'
+#  Last modified 2022-06-04 13:35:27
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 14):
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	
+
+# Not a target:
+get_next_line/get_next_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -278,29 +314,78 @@ clean:
 	
 
 # Not a target:
-src/test.c:
+src/map_utils.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-31 13:51:16
+#  Last modified 2022-06-04 13:12:26
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-so_long: src/test.o
-#  Implicit rule search has not been done.
-#  Last modified 2022-05-31 13:56:50
+src/map.o: src/map.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `src/map'
+#  Last modified 2022-06-04 13:35:27
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 14):
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	
+
+src/map_utils2.o: src/map_utils2.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `src/map_utils2'
+#  Last modified 2022-06-04 13:35:27
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := src/map_utils2.o
+# automatic
+# % := 
+# automatic
+# * := src/map_utils2
+# automatic
+# + := src/map_utils2.c
+# automatic
+# | := 
+# automatic
+# < := src/map_utils2.c
+# automatic
+# ^ := src/map_utils2.c
+# automatic
+# ? := src/map_utils2.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/17=12%
+#  commands to execute (from `Makefile', line 14):
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	
+
+so_long: src/so_long.o src/map.o src/map_utils.o src/map_utils2.o get_next_line/get_next_line.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
 #  commands to execute (from `Makefile', line 21):
 	$(MAKE) -C $(LIBFT)
 	$(MAKE) -C $(MLX)
 	$(CC) $(CFLAGS) $(MLXFLAGS) -o $(NAME) $(OBJS) -L $(LIBFT) -lft
 	
 
+# Not a target:
+src/so_long.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-03 20:52:17
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
 # files hash-table stats:
-# Load=12/1024=1%, Rehash=0, Collisions=0/39=0%
+# Load=19/1024=2%, Rehash=0, Collisions=0/63=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -308,11 +393,10 @@ so_long: src/test.o
 # No general (`VPATH' variable) search path.
 
 # # of strings in strcache: 1
- 
 # # of strcache buffers: 1
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue May 31 13:56:59 2022
+# Finished Make data base on Sat Jun  4 13:35:41 2022
 
  
