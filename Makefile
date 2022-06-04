@@ -1,4 +1,4 @@
-SRCS = src/so_long.c src/map.c src/map_utils.c src/map_utils2.c get_next_line/get_next_line.c
+SRCS = src/so_long.c src/map.c src/map_utils.c src/map_utils2.c src/mlx_utils.c get_next_line/get_next_line.c
 
 OBJS = $(SRCS:.c=.o)
 

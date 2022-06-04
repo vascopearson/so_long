@@ -8,6 +8,11 @@
 # include <stdio.h>
 # include <fcntl.h>
 
+typedef struct s_mlx {
+    void    *mlx;
+    void    *window;
+}   t_mlx;
+
 char    ***map(void);
 int     map_size_x(char *map_file);
 int     map_size_y(char *map_file);
@@ -23,5 +28,6 @@ int     ft_xlen(char *str);
 void    free_map(char ***str_map);
 void    set_start_pos(void);
 
+t_mlx   *mlx_struct(void);
 
 #endif
