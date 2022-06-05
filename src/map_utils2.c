@@ -74,3 +74,25 @@ void    set_start_pos(void)
         y++;
     }
 }
+
+void    count_colectibles(void)
+{
+    int x;
+    int y;
+    int counter;
+
+    counter = 0;
+    y = 0;
+    while ((*map())[y])
+    {
+        x = 0;
+        while ((*map())[y][x])
+        {
+            if ((*map())[y][x] == 'C')
+                counter++;
+            x++;
+        }
+        y++;
+    }
+    (*mlx_struct()).colectibles = counter;
+}

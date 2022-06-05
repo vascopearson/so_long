@@ -19,6 +19,7 @@ typedef struct s_images {
 typedef struct s_mlx {
     void    *mlx;
     void    *window;
+    int     colectibles;
 }   t_mlx;
 
 char    ***map(void);
@@ -35,6 +36,7 @@ int     map_closed(char **str);
 int     ft_xlen(char *str);
 void    free_map(char ***str_map);
 void    set_start_pos(void);
+void    count_colectibles(void);
 
 t_mlx   *mlx_struct(void);
 

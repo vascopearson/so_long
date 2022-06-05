@@ -23,6 +23,7 @@ int	main(int argc, char **argv)
 	}
 	(*mlx_struct()).window = mlx_new_window((*mlx_struct()).mlx, size_x, size_y, "So Long!");
 	put_images(64);
+	count_colectibles();
 	put_window((*mlx_struct()).mlx, (*mlx_struct()).window);
 	mlx_loop((*mlx_struct()).mlx);
 }
