@@ -61,7 +61,7 @@ int check_map(char *map_file, char ***str_map)
     if (!(*str_map))
     {
         write(1, "Error\n", 6); //Check if free is needed
-        return (0); 
+        return (0);
     }
     i = 0;
     fd = open(map_file, O_RDONLY);

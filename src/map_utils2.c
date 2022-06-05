@@ -56,21 +56,21 @@ void    set_start_pos(void)
     int y;
     int counter;
 
-    x = 0;
+    y = 0;
     counter = 0;
-    while ((*map())[x])
+    while ((*map())[y])
     {
-        y = 0;
-        while ((*map())[x][y])
+        x = 0;
+        while ((*map())[y][x])
         {
-            if ((*map())[x][y] == 'P')
+            if ((*map())[y][x] == 'P')
             {
                 counter++;
                 if (counter > 1)
-                    (*map())[x][y] = '0';
+                    (*map())[y][x] = '0';
             }
-            y++;
+            x++;
         }
-        x++;
+        y++;
     }
 }

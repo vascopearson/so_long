@@ -8,12 +8,21 @@ int	main(int argc, char **argv)
 	if (argc != 2)
 		return (0);
 	if (!check_map(argv[1], map()))
+	{
 		write(1, "Error\n", 6);
-	size_y = map_size_y(argv[1]);
-	size_x = map_size_x(argv[1]);
+		return (0);
+	}
+	size_y = map_size_y(argv[1])*64;
+	size_x = map_size_x(argv[1])*64;
 	set_start_pos();
 	(*mlx_struct()).mlx = mlx_init();
 	if (!(*mlx_struct()).mlx)
+	{
+		write(1, "Error\n", 6);
 		return (0); //Check
+	}
 	(*mlx_struct()).window = mlx_new_window((*mlx_struct()).mlx, size_x, size_y, "So Long!");
+	put_images(64);
+	put_window((*mlx_struct()).mlx, (*mlx_struct()).window);
+	mlx_loop((*mlx_struct()).mlx);
 }

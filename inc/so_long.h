@@ -8,6 +8,14 @@
 # include <stdio.h>
 # include <fcntl.h>
 
+typedef struct s_images {
+    void    *dolphin;
+    void    *fish;
+    void    *water;
+    void    *door;
+    void    *algae;
+}   t_images;
+
 typedef struct s_mlx {
     void    *mlx;
     void    *window;
@@ -29,5 +37,10 @@ void    free_map(char ***str_map);
 void    set_start_pos(void);
 
 t_mlx   *mlx_struct(void);
+
+t_images    *images(void);
+void    put_images(int size);
+void    put_window(void *mlx, void *window);
+void    put_object(int x, int y, void *mlx, void *window);
 
 #endif

@@ -4,12 +4,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software; see the source for copying conditions.
 # There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE.
- 
 
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Sat Jun  4 19:56:37 2022
+# Make data base, printed on Sun Jun  5 13:18:29 2022
 
 # Variables
 
@@ -31,21 +30,22 @@ BASH_SILENCE_DEPRECATION_WARNING = 1
 CURDIR := /Users/Mar/Desktop/so_long
 # makefile
 SHELL = /bin/sh
-# makefile (from `Makefile', line 6)
+# makefile (from `Makefile', line 7)
 RM = rm -f
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
-# makefile (from `Makefile', line 8)
+# makefile (from `Makefile', line 9)
 MLX = mlx
 # environment
 _ = /usr/bin/make
-# makefile (from `Makefile', line 9)
+# makefile (from `Makefile', line 10)
 CFLAGS = -g -Wall -Wextra -Werror -I$(HEADER) -I$(LIBFT) -I$(MLX)
 # makefile (from `Makefile', line 1)
+ 
 MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
-# makefile (from `Makefile', line 3)
+# makefile (from `Makefile', line 4)
 OBJS = $(SRCS:.c=.o)
 # environment
 VSCODE_IPC_HOOK_EXTHOST = /var/folders/by/fx2s2rm52v98q692r3d8vwp40000gn/T/vscode-ipc-98e5ff81-2256-4eb7-9c3e-81e6cd9ece3f.sock
@@ -67,7 +67,7 @@ SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.XMQlm0N9PN/Listeners
 DISPLAY = /private/tmp/com.apple.launchd.tMC6uJim4j/org.xquartz:0
 # environment
 CONDA_EXE = /Users/Mar/opt/anaconda3/bin/conda
-# makefile (from `Makefile', line 10)
+# makefile (from `Makefile', line 11)
 MLXFLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
 # environment
 VSCODE_PIPE_LOGGING = true
@@ -102,12 +102,12 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # makefile (from `Makefile', line 1)
-SRCS = src/so_long.c src/map.c src/map_utils.c src/map_utils2.c src/mlx_utils.c get_next_line/get_next_line.c
+SRCS = src/so_long.c src/map.c src/map_utils.c src/map_utils2.c src/mlx_utils.c src/img_utils.c get_next_line/get_next_line.c
 # environment
 SHLVL = 2
-# makefile (from `Makefile', line 7)
+# makefile (from `Makefile', line 8)
 LIBFT = libft
-# makefile (from `Makefile', line 5)
+# makefile (from `Makefile', line 6)
 CC = gcc
 # default
 MAKE_VERSION := 3.81
@@ -115,7 +115,7 @@ MAKE_VERSION := 3.81
 USER = Mar
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from `Makefile', line 16)
+# makefile (from `Makefile', line 17)
 NAME = so_long
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -153,7 +153,7 @@ MAKEFILES :=
 LC_ALL = C
 # environment
 CONDA_PYTHON_EXE = /Users/Mar/opt/anaconda3/bin/python
-# makefile (from `Makefile', line 11)
+# makefile (from `Makefile', line 12)
 HEADER = inc
 # automatic
 ^F = $(notdir $^)
@@ -182,15 +182,15 @@ LANG = C
 
 # Directories
 
-# . (device 16777223, inode 33842577): 12 files, no impossibilities.
+# . (device 16777223, inode 33842577): 14 files, no impossibilities.
 # src (device 16777223, inode 33842748): 7 files, no impossibilities so far.
 
-# 19 files, no impossibilities in 2 directories.
+# 21 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
 %.o: %.c
-#  commands to execute (from `Makefile', line 14):
+#  commands to execute (from `Makefile', line 15):
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 	
 
@@ -220,6 +220,12 @@ all: so_long
 #  File has not been updated.
 
 # Not a target:
+src/img_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -228,7 +234,7 @@ all: so_long
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-04 19:56:36
+#  Last modified 2022-06-05 13:18:26
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -240,7 +246,7 @@ src/map_utils.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-bonus: src/so_long.o src/map.o src/map_utils.o src/map_utils2.o src/mlx_utils.o get_next_line/get_next_line.o
+bonus: src/so_long.o src/map.o src/map_utils.o src/map_utils2.o src/mlx_utils.o src/img_utils.o get_next_line/get_next_line.o
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -251,7 +257,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 29):
+#  commands to execute (from `Makefile', line 30):
 	$(RM) $(NAME)
 	
 
@@ -263,6 +269,7 @@ src/so_long.o: src/so_long.c
 #  Needs to be updated (-q is set).
 # automatic
 # @ := src/so_long.o
+ 
 # automatic
 # % := 
 # automatic
@@ -279,7 +286,7 @@ src/so_long.o: src/so_long.c
 # ? := src/so_long.c
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/17=12%
-#  commands to execute (from `Makefile', line 14):
+#  commands to execute (from `Makefile', line 15):
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 	
 
@@ -306,7 +313,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 26):
+#  commands to execute (from `Makefile', line 27):
 	$(RM) $(OBJS) $(BONUS_OBJS) $(LIBFT)/*.o
 	
 
@@ -322,15 +329,14 @@ src/map_utils2.o:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
-so_long: src/so_long.o src/map.o src/map_utils.o src/map_utils2.o src/mlx_utils.o get_next_line/get_next_line.o
+so_long: src/so_long.o src/map.o src/map_utils.o src/map_utils2.o src/mlx_utils.o src/img_utils.o get_next_line/get_next_line.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/7=0%
-#  commands to execute (from `Makefile', line 21):
+#  commands to execute (from `Makefile', line 22):
 	$(MAKE) -C $(LIBFT)
 	$(MAKE) -C $(MLX)
 	$(CC) $(CFLAGS) $(MLXFLAGS) -o $(NAME) $(OBJS) -L $(LIBFT) -lft
@@ -339,14 +345,14 @@ so_long: src/so_long.o src/map.o src/map_utils.o src/map_utils2.o src/mlx_utils.
 # Not a target:
 src/so_long.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-04 19:55:32
+#  Last modified 2022-06-05 13:18:29
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=17/1024=2%, Rehash=0, Collisions=0/54=0%
+# Load=18/1024=2%, Rehash=0, Collisions=0/57=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -358,6 +364,6 @@ src/so_long.c:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Jun  4 19:56:37 2022
+# Finished Make data base on Sun Jun  5 13:18:29 2022
 
  
