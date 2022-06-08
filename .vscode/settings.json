@@ -1,8 +1,0 @@
-{
-    "makefile.extensionOutputFolder": "./.vscode",
-    "files.associations": {
-        "algorithm": "c",
-        "random": "c",
-        "so_long.h": "c"
-    }
-}

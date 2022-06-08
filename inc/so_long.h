@@ -20,6 +20,7 @@ typedef struct s_mlx {
     void    *mlx;
     void    *window;
     int     colectibles;
+    int     nbr_of_moves;
 }   t_mlx;
 
 char    ***map(void);
@@ -50,5 +51,7 @@ void    put_object(int x, int y, void *mlx, void *window);
 void    destroy_images(void);
 
 int     ft_exit_game(void);
+void	error_and_exit(void);
+void	print_moves(void);
 
 #endif

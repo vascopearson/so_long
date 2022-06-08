@@ -41,6 +41,8 @@ void    ft_move(int x_step,int y_step)
                     return ;
                 (*map())[y][x] = '0';
                 (*map())[y + y_step][x + x_step] = 'P';
+                (*mlx_struct()).nbr_of_moves++;
+                print_moves();
                 return ;
             }
             x++;
