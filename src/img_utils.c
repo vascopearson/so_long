@@ -9,13 +9,11 @@ t_images    *images(void)
 
 void    put_images(int size)
 {
-    (*images()).dolphin = mlx_xpm_file_to_image((*mlx_struct()).mlx, "../images/Dolphin.xpm", &size, &size);
-    if (!(*images()).dolphin)
-        printf("NULL\n");
-    (*images()).fish = mlx_xpm_file_to_image((*mlx_struct()).mlx, "../images/Fish.xpm", &size, &size);
-    (*images()).water = mlx_xpm_file_to_image((*mlx_struct()).mlx, "../images/Water.xpm", &size, &size);
-    (*images()).algae = mlx_xpm_file_to_image((*mlx_struct()).mlx, "../images/Algae.xpm", &size, &size);
-    (*images()).door = mlx_xpm_file_to_image((*mlx_struct()).mlx, "../images/Door.xpm", &size, &size);
+    (*images()).dolphin = mlx_xpm_file_to_image((*mlx_struct()).mlx, "./images/Dolphin.xpm", &size, &size);
+    (*images()).fish = mlx_xpm_file_to_image((*mlx_struct()).mlx, "./images/Fish.xpm", &size, &size);
+    (*images()).water = mlx_xpm_file_to_image((*mlx_struct()).mlx, "./images/Water.xpm", &size, &size);
+    (*images()).algae = mlx_xpm_file_to_image((*mlx_struct()).mlx, "./images/Algae.xpm", &size, &size);
+    (*images()).door = mlx_xpm_file_to_image((*mlx_struct()).mlx, "./images/Door.xpm", &size, &size);
 }
 
 void    put_window(void *mlx, void *window)
@@ -39,11 +37,7 @@ void    put_window(void *mlx, void *window)
 void    put_object(int x, int y, void *mlx, void *window)
 {
     if ((*map())[y][x] == '1')
-    {
-        printf("%i\n", x * 64);
         mlx_put_image_to_window(mlx, window, (*images()).algae, x * 64, y * 64);
-        printf("%c\n", (*map())[x][y]);
-    }
     if ((*map())[y][x] == '0')
         mlx_put_image_to_window(mlx, window, (*images()).water, x * 64, y * 64);
     if ((*map())[y][x] == 'P')
