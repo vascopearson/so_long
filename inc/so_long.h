@@ -40,13 +40,15 @@ void    count_colectibles(void);
 
 t_mlx   *mlx_struct(void);
 int     key_hook(int keycode);
+void    ft_move(int x_step,int y_step);
+int    ft_move_consequence(int x, int y, int x_step, int y_step);
 
 t_images    *images(void);
 void    put_images(int size);
 void    put_window(void *mlx, void *window);
 void    put_object(int x, int y, void *mlx, void *window);
+void    destroy_images(void);
 
 int     ft_exit_game(void);
-void    destroy_images(void);
 
 #endif

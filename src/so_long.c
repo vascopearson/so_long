@@ -28,4 +28,5 @@ int	main(int argc, char **argv)
 	mlx_hook((*mlx_struct()).window, 17, 0, ft_exit_game, 0);
 	mlx_key_hook((*mlx_struct()).window, key_hook, 0);
 	mlx_loop((*mlx_struct()).mlx);
+	ft_exit_game();
 }
