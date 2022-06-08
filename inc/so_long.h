@@ -39,10 +39,14 @@ void    set_start_pos(void);
 void    count_colectibles(void);
 
 t_mlx   *mlx_struct(void);
+int     key_hook(int keycode);
 
 t_images    *images(void);
 void    put_images(int size);
 void    put_window(void *mlx, void *window);
 void    put_object(int x, int y, void *mlx, void *window);
+
+int     ft_exit_game(void);
+void    destroy_images(void);
 
 #endif

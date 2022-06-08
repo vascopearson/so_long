@@ -25,5 +25,7 @@ int	main(int argc, char **argv)
 	put_images(64);
 	count_colectibles();
 	put_window((*mlx_struct()).mlx, (*mlx_struct()).window);
+	mlx_hook((*mlx_struct()).window, 17, 0, ft_exit_game, 0);
+	mlx_key_hook((*mlx_struct()).window, key_hook, 0);
 	mlx_loop((*mlx_struct()).mlx);
 }

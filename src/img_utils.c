@@ -47,3 +47,17 @@ void    put_object(int x, int y, void *mlx, void *window)
     if ((*map())[y][x] == 'E')
         mlx_put_image_to_window(mlx, window, (*images()).door, x * 64, y * 64);
 }
+
+void    destroy_images(void)
+{
+    if ((*images()).dolphin)
+        mlx_destroy_image((*mlx_struct()).mlx, (*images()).dolphin);
+    if ((*images()).fish)
+        mlx_destroy_image((*mlx_struct()).mlx, (*images()).fish);
+    if ((*images()).algae)
+        mlx_destroy_image((*mlx_struct()).mlx, (*images()).algae);
+    if ((*images()).water)
+        mlx_destroy_image((*mlx_struct()).mlx, (*images()).water);
+    if ((*images()).door)
+        mlx_destroy_image((*mlx_struct()).mlx, (*images()).door);
+}
