@@ -59,6 +59,8 @@ int    ft_move_consequence(int x, int y, int x_step, int y_step)
     {
         if ((*mlx_struct()).colectibles == 0)
         {
+            (*mlx_struct()).nbr_of_moves++;
+            print_moves();
             free_map(map());
             exit(0);
         }
