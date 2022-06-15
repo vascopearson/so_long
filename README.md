@@ -26,3 +26,9 @@ $ cd path/to/so_long && make all
 $./so_long maps/map1.ber
 ```
 You can choose any map in the maps directory or create your own map in a .ber file.
+
+**2. Playing the game**
+
+Use the W,A,S,D keys to move.<br/>
+You can only exit through the door once you have collected all the colectibles.<br/>
+You can exit the game without completing it by pressing **esc** or the top left red cross on the window.
