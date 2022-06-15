@@ -1,4 +1,4 @@
-# minitalk
+# so_long
 
 ## 🗣️ About this project
 
@@ -6,7 +6,7 @@
 >Its purpose is to make you work with textures, sprites,
 and some other very basic gameplay elements.
 
-For detailed information, refer to the [**subject of this project**](https://github.com/vascopearson/minitalk/blob/master/minitalk_subject.pdf).
+For detailed information, refer to the [**subject of this project**](https://github.com/vascopearson/so_long/blob/master/en.subject.pdf).
 
 ## 🛠️ Usage
 
