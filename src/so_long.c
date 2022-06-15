@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vserrao- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/15 12:47:59 by vserrao-          #+#    #+#             */
+/*   Updated: 2022/06/15 12:48:15 by vserrao-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/so_long.h"
 
 int	main(int argc, char **argv)
@@ -9,13 +21,14 @@ int	main(int argc, char **argv)
 		return (0);
 	if (!check_map(argv[1], map()))
 		error_and_exit();
-	size_y = map_size_y(argv[1])*64;
-	size_x = map_size_x(argv[1])*64;
+	size_y = map_size_y(argv[1]) * 64;
+	size_x = map_size_x(argv[1]) * 64;
 	set_start_pos();
 	(*mlx_struct()).mlx = mlx_init();
 	if (!(*mlx_struct()).mlx)
 		error_and_exit();
-	(*mlx_struct()).window = mlx_new_window((*mlx_struct()).mlx, size_x, size_y, "So Long!");
+	(*mlx_struct()).window = mlx_new_window((*mlx_struct()).mlx, \
+			size_x, size_y, "So Long!");
 	put_images(64);
 	count_colectibles();
 	put_window((*mlx_struct()).mlx, (*mlx_struct()).window);

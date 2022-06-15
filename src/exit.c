@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   exit.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vserrao- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/15 12:40:15 by vserrao-          #+#    #+#             */
+/*   Updated: 2022/06/15 12:41:12 by vserrao-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/so_long.h"
 
-int     ft_exit_game(void)
+int	ft_exit_game(void)
 {
-    destroy_images();
-    free_map(map());
-    exit(0);
-    return (0);
+	destroy_images();
+	free_map(map());
+	exit(0);
+	return (0);
 }
