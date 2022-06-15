@@ -12,12 +12,12 @@
 
 #include "../inc/so_long.h"
 
-int	map_rectangular(char **str)
+int	map_rectangular(char **str, int size_y)
 {
 	int	i;
 
 	i = 1;
-	while (str[i])
+	while (i < size_y)
 	{
 		if (ft_xlen(str[i]) != ft_xlen(str[i - 1]))
 			return (0);
@@ -36,16 +36,16 @@ int	ft_xlen(char *str)
 	return (len);
 }
 
-int	map_closed(char **str)
+int	map_closed(char **str, int size_y)
 {
 	int	i;
 	int	j;
 
-	if (!map_rectangular(str))
+	if (!map_rectangular(str, size_y))
 		return (0);
 	i = 0;
 	j = ft_xlen(str[0]) - 1;
-	while (str[i] && str[i][j])
+	while (i < size_y && str[i][j])
 	{
 		if (str[i][0] != '1' || str[i][j] != '1')
 			return (0);
@@ -62,7 +62,7 @@ int	map_closed(char **str)
 	return (1);
 }
 
-void	set_start_pos(void)
+void	set_start_pos(int size_x, int size_y)
 {
 	int	x;
 	int	y;
@@ -70,10 +70,10 @@ void	set_start_pos(void)
 
 	y = 0;
 	counter = 0;
-	while ((*map())[y])
+	while (y < size_y)
 	{
 		x = 0;
-		while ((*map())[y][x])
+		while (x < size_x)
 		{
 			if ((*map())[y][x] == 'P')
 			{
@@ -87,7 +87,7 @@ void	set_start_pos(void)
 	}
 }
 
-void	count_colectibles(void)
+void	count_colectibles(int size_x, int size_y)
 {
 	int	x;
 	int	y;
@@ -95,10 +95,10 @@ void	count_colectibles(void)
 
 	counter = 0;
 	y = 0;
-	while ((*map())[y])
+	while (y < size_y)
 	{
 		x = 0;
-		while ((*map())[y][x])
+		while (x < size_x)
 		{
 			if ((*map())[y][x] == 'C')
 				counter++;

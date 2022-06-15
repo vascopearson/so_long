@@ -57,6 +57,7 @@ int	map_size_y(char *map_file)
 	if (buffer[0] != '\n' && buffer[0] != '\0')
 		size++;
 	close(fd);
+	
 	return (size);
 }
 
@@ -76,24 +77,24 @@ int	check_map(char *map_file, char ***str_map)
 	fd = open(map_file, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	(*str_map)[i] = get_next_line(fd);
-	while ((*str_map)[i])
-		(*str_map)[++i] = get_next_line(fd);
-	if (!map_content((*str_map)) || \
-			!map_rectangular((*str_map)) || !map_closed((*str_map)))
+	(*str_map)[i++] = get_next_line(fd);
+	while (i < size_y)
+		(*str_map)[i++] = get_next_line(fd);
+	if (!map_content((*str_map), size_y) || \
+			!map_rectangular((*str_map), size_y) || !map_closed((*str_map), size_y))
 	{
-		free_map(str_map);
+		free_map(str_map, size_y);
 		return (0);
 	}
 	return (1);
 }
 
-void	free_map(char ***str_map)
+void	free_map(char ***str_map, int size_y)
 {
 	int	i;
 
 	i = 0;
-	while ((*str_map)[i])
+	while (i < size_y)
 	{
 		free((*str_map)[i]);
 		i++;

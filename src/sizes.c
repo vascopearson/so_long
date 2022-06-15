@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit.c                                             :+:      :+:    :+:   */
+/*   sizes.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vserrao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 12:40:15 by vserrao-          #+#    #+#             */
-/*   Updated: 2022/06/15 12:41:12 by vserrao-         ###   ########.fr       */
+/*   Created: 2022/06/15 17:27:08 by vserrao-          #+#    #+#             */
+/*   Updated: 2022/06/15 17:27:10 by vserrao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/so_long.h"
 
-int	ft_exit_game(t_sizes *sizes)
+t_sizes	sizes_struct(char *map_file)
 {
-	destroy_images();
-	free_map(map(), sizes->size_y);
-	exit(0);
-	return (0);
+	t_sizes	return_sizes_struct;
+
+    return_sizes_struct.size_x = map_size_x(map_file) * 64;
+    return_sizes_struct.size_y = map_size_y(map_file) * 64;
+	return (return_sizes_struct);
 }

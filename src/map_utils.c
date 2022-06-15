@@ -17,22 +17,25 @@ int	check_name(char *map_file)
 	int	i;
 
 	i = ft_strlen(map_file);
-	if (map_file[i - 1] == 'r' && map_file[i - 2] == 'e' && \
+	if (i > 3 && map_file[i - 1] == 'r' && map_file[i - 2] == 'e' && \
 			map_file[i - 3] == 'b' && map_file[i - 4] == '.')
 		return (1);
 	return (0);
 }
 
-int	map_content(char **str)
+int	map_content(char **str, int	size_y)
 {
+	int	k;
 	int	i;
 	int	j;
 
+	k = 0;
 	i = 0;
-	while (str[i])
+	while (i < size_y)
 	{
 		j = 0;
-		while (str[i][j] && str[i][j] != '\n')
+		while (str[i][j] && str[i][j] != '\n' && \
+		str[i][j] && str[i][j] != '\0')
 		{
 			if (!check_valid(str[i][j]))
 				return (0);
@@ -40,7 +43,7 @@ int	map_content(char **str)
 		}
 		i++;
 	}
-	if (!check_at_least_one(str))
+	if (!check_at_least_one(str, size_y))
 		return (0);
 	return (1);
 }
@@ -52,24 +55,24 @@ int	check_valid(char c)
 	return (0);
 }
 
-int	check_at_least_one(char **str)
+int	check_at_least_one(char **str, int size_y)
 {
-	if (!check_object(str, 'P'))
+	if (!check_object(str, 'P', size_y))
 		return (0);
-	if (!check_object(str, 'C'))
+	if (!check_object(str, 'C', size_y))
 		return (0);
-	if (!check_object(str, 'E'))
+	if (!check_object(str, 'E', size_y))
 		return (0);
 	return (1);
 }
 
-int	check_object(char **str, char c)
+int	check_object(char **str, char c, int size_y)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (str[i])
+	while (i < size_y)
 	{
 		j = 0;
 		while (str[i][j] && str[i][j] != '\n')

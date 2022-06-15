@@ -14,28 +14,26 @@
 
 int	main(int argc, char **argv)
 {
-	int		size_x;
-	int		size_y;
+	t_sizes	sizes;
 
 	if (argc != 2)
 		return (0);
 	if (!check_map(argv[1], map()))
-		error_and_exit();
-	size_y = map_size_y(argv[1]) * 64;
-	size_x = map_size_x(argv[1]) * 64;
-	set_start_pos();
+		error_and_exit(); // FREE MAP ??
+	sizes = sizes_struct(argv[1]);
+	set_start_pos(sizes.size_x / 64, sizes.size_y / 64);
 	(*mlx_struct()).mlx = mlx_init();
 	if (!(*mlx_struct()).mlx)
-		error_and_exit();
+		error_and_exit(); //FREE MAP
 	(*mlx_struct()).window = mlx_new_window((*mlx_struct()).mlx, \
-			size_x, size_y, "So Long!");
+			sizes.size_x, sizes.size_y, "So Long!");
 	put_images(64);
-	count_colectibles();
-	put_window((*mlx_struct()).mlx, (*mlx_struct()).window);
-	mlx_hook((*mlx_struct()).window, 17, 0, ft_exit_game, 0);
-	mlx_key_hook((*mlx_struct()).window, key_hook, 0);
+	count_colectibles(sizes.size_x / 64, sizes.size_y / 64);
+	put_window((*mlx_struct()).mlx, (*mlx_struct()).window, sizes.size_x / 64, sizes.size_y / 64);
+	mlx_hook((*mlx_struct()).window, 17, 0, ft_exit_game, &sizes);
+	mlx_key_hook((*mlx_struct()).window, key_hook, &sizes);
 	mlx_loop((*mlx_struct()).mlx);
-	ft_exit_game();
+	ft_exit_game(&sizes);
 }
 
 void	error_and_exit(void)

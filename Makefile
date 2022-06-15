@@ -1,5 +1,5 @@
 SRCS = src/so_long.c src/map.c src/map_utils.c src/map_utils2.c src/mlx_utils.c src/img_utils.c \
-src/exit.c get_next_line/get_next_line.c
+src/exit.c src/sizes.c get_next_line/get_next_line.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -7,7 +7,7 @@ CC = gcc
 RM = rm -f
 LIBFT = libft
 MLX = mlx
-CFLAGS = -g -Wall -Wextra -Werror -I$(HEADER) -I$(LIBFT) -I$(MLX)
+CFLAGS = -g -Wall -Wextra -Werror -fsanitize=address -I$(HEADER) -I$(LIBFT) -I$(MLX)
 MLXFLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
 HEADER = inc
 

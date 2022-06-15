@@ -33,16 +33,16 @@ void	put_images(int size)
 			"./images/Door.xpm", &size, &size);
 }
 
-void	put_window(void *mlx, void *window)
+void	put_window(void *mlx, void *window, int size_x, int size_y)
 {
 	int	x;
 	int	y;
 
 	y = 0;
-	while ((*map())[y])
+	while (y < size_y)
 	{
 		x = 0;
-		while ((*map())[y][x])
+		while (x < size_x)
 		{
 			put_object(x, y, mlx, window);
 			x++;
