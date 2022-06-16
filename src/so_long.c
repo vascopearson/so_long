@@ -19,12 +19,12 @@ int	main(int argc, char **argv)
 	if (argc != 2)
 		return (0);
 	if (!check_map(argv[1], map()))
-		error_and_exit(); // FREE MAP ??
+		error_and_exit();
 	sizes = sizes_struct(argv[1]);
 	set_start_pos(sizes.size_x / 64, sizes.size_y / 64);
 	(*mlx_struct()).mlx = mlx_init();
 	if (!(*mlx_struct()).mlx)
-		error_and_exit(); //FREE MAP
+		free_error_and_exit(map(), sizes.size_y / 64);
 	(*mlx_struct()).window = mlx_new_window((*mlx_struct()).mlx, \
 			sizes.size_x, sizes.size_y, "So Long!");
 	put_images(64);
@@ -38,6 +38,13 @@ int	main(int argc, char **argv)
 
 void	error_and_exit(void)
 {
+	write(1, "Error\n", 6);
+	exit(0);
+}
+
+void	free_error_and_exit(char ***str_map, int size_y)
+{
+	free_map(str_map, size_y);
 	write(1, "Error\n", 6);
 	exit(0);
 }

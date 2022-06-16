@@ -76,7 +76,7 @@ int	check_map(char *map_file, char ***str_map)
 	i = 0;
 	fd = open(map_file, O_RDONLY);
 	if (fd == -1)
-		return (0);
+		free_error_and_exit(str_map, size_y);
 	(*str_map)[i++] = get_next_line(fd);
 	while (i < size_y)
 		(*str_map)[i++] = get_next_line(fd);

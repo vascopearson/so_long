@@ -15,7 +15,7 @@
 int	ft_exit_game(t_sizes *sizes)
 {
 	destroy_images();
-	free_map(map(), sizes->size_y);
+	free_map(map(), sizes->size_y / 64);
 	exit(0);
 	return (0);
 }

@@ -70,6 +70,7 @@ void		destroy_images(void);
 
 int			ft_exit_game(t_sizes *sizes);
 void		error_and_exit(void);
+void		free_error_and_exit(char ***str_map, int size_y);
 void		print_moves(void);
 
 #endif
