@@ -6,7 +6,7 @@
 /*   By: vserrao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 12:52:17 by vserrao-          #+#    #+#             */
-/*   Updated: 2022/06/15 12:56:06 by vserrao-         ###   ########.fr       */
+/*   Updated: 2022/06/22 12:39:19 by vserrao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ int	key_hook(int keycode, t_sizes *sizes)
 	if (keycode == 13)
 		ft_move(0, -1, sizes);
 	mlx_clear_window((*mlx_struct()).mlx, (*mlx_struct()).window);
-	put_window((*mlx_struct()).mlx, (*mlx_struct()).window, sizes->size_x / 64, sizes->size_y / 64);
+	put_window((*mlx_struct()).mlx, (*mlx_struct()).window, \
+			sizes->size_x / 64, sizes->size_y / 64);
 	return (0);
 }
 
@@ -50,7 +51,8 @@ void	ft_move(int x_step, int y_step, t_sizes *sizes)
 			if ((*map())[y][x] == 'P' && \
 					(*map())[y + y_step][x + x_step] != '1')
 			{
-				if (ft_move_consequence(x + x_step, y + y_step, sizes->size_y / 64) == 1)
+				if (ft_move_consequence(x + x_step, y + y_step, \
+							sizes->size_y / 64) == 1)
 					return ;
 				(*map())[y][x] = '0';
 				(*map())[y + y_step][x + x_step] = 'P';

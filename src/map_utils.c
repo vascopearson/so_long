@@ -6,7 +6,7 @@
 /*   By: vserrao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 13:00:20 by vserrao-          #+#    #+#             */
-/*   Updated: 2022/06/15 13:09:29 by vserrao-         ###   ########.fr       */
+/*   Updated: 2022/06/22 12:38:51 by vserrao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	check_name(char *map_file)
 	return (0);
 }
 
-int	map_content(char **str, int	size_y)
+int	map_content(char **str, int size_y)
 {
 	int	k;
 	int	i;

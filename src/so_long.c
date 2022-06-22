@@ -6,7 +6,7 @@
 /*   By: vserrao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 12:47:59 by vserrao-          #+#    #+#             */
-/*   Updated: 2022/06/15 12:48:15 by vserrao-         ###   ########.fr       */
+/*   Updated: 2022/06/22 12:39:48 by vserrao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ int	main(int argc, char **argv)
 			sizes.size_x, sizes.size_y, "So Long!");
 	put_images(64);
 	count_colectibles(sizes.size_x / 64, sizes.size_y / 64);
-	put_window((*mlx_struct()).mlx, (*mlx_struct()).window, sizes.size_x / 64, sizes.size_y / 64);
+	put_window((*mlx_struct()).mlx, (*mlx_struct()).window, \
+			sizes.size_x / 64, sizes.size_y / 64);
 	mlx_hook((*mlx_struct()).window, 17, 0, ft_exit_game, &sizes);
 	mlx_key_hook((*mlx_struct()).window, key_hook, &sizes);
 	mlx_loop((*mlx_struct()).mlx);

@@ -6,7 +6,7 @@
 /*   By: vserrao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 13:09:41 by vserrao-          #+#    #+#             */
-/*   Updated: 2022/06/15 13:15:57 by vserrao-         ###   ########.fr       */
+/*   Updated: 2022/06/22 12:38:13 by vserrao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ int	map_size_y(char *map_file)
 	if (buffer[0] != '\n' && buffer[0] != '\0')
 		size++;
 	close(fd);
-	
 	return (size);
 }
 
@@ -81,7 +80,8 @@ int	check_map(char *map_file, char ***str_map)
 	while (i < size_y)
 		(*str_map)[i++] = get_next_line(fd);
 	if (!map_content((*str_map), size_y) || \
-			!map_rectangular((*str_map), size_y) || !map_closed((*str_map), size_y))
+			!map_rectangular((*str_map), size_y) || \
+			!map_closed((*str_map), size_y))
 	{
 		free_map(str_map, size_y);
 		return (0);
